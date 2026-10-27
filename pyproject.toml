@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tomtoscsoe-cachehit"
+version = "0.1.0"
+description = "统计命中率并按前缀长度、请求间隔归类未命中原因"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "tomtoscsoe" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://tomtoscsoe.github.io"
+Repository = "https://github.com/tomtoscsoe/cachehit"
+Issues = "https://github.com/tomtoscsoe/cachehit/issues"
+
+[project.scripts]
+cachehit = "cachehit:main"
+
+[tool.setuptools]
+py-modules = ["cachehit"]
